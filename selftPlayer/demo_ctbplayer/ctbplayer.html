@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>用车专家</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store,no-siteapp, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui;">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="用车专家">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="format-detection" content="telephone=no">
+<link href="./css/ctbplayer.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="ctbplayer-car-page">
+	<div class="ctbplayer-car-top">
+		<div class="car-top-search-box">
+			<div class="car-top-search" id="car-top-search">
+				<input type="text" id="car-top-search-input" class="car-top-search-input" placeholder="请输入查找关键字 " />
+			</div>
+			<div class="car-top-search-btn" id="car-top-search-btn"></div>
+		</div>
+	</div>
+	<div class="ctbplayer-car-title-box"></div>
+	<div class="ctbplayer-car-filter">
+		
+	</div>
+	<div class="ctbplayer-car-playlist jp-playlist"><ul><li>&nbsp;</li></ul></div>
+</div>
+<script type="text/javascript" src="../ctbplayer/js/jquery.min.js"></script>
+<script type="text/javascript" src="../ctbplayer/js/ctbplayer.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	~function(){
+		var pageBox = document.querySelector(".ctbplayer-car-page").getBoundingClientRect();
+		var topBox = document.querySelector(".ctbplayer-car-top").getBoundingClientRect();
+		var titleBox = document.querySelector(".ctbplayer-car-title-box").getBoundingClientRect();
+		var filterBox = document.querySelector(".ctbplayer-car-filter").getBoundingClientRect();
+		$(".ctbplayer-car-playlist").css({"height": (pageBox.bottom - filterBox.bottom)+"px"});
+	}();
+	
+	var ctbPL = new CTBPlayerPlaylist("default");
+	ctbPL.setPlaylist([
+	                	{
+	             			title:"8888%E7%BA%A2%E7%8E%AB%E7%91%B0",
+	             			mp3:"http://wxfm.chetuobang.com/wx/%E9%99%88%E5%A5%95%E8%BF%85-%E7%BA%A2%E7%8E%AB%E7%91%B0.mp3"
+	             		},
+	             		{
+	             			title:"李佳薇 - 像天堂的悬崖",
+	             			mp3:"./music/2.mp3"
+	             		},
+	             		{
+	             			title:"李佳薇 - 笑到流泪",
+	             			mp3:"./music/3.mp3"
+	             		},
+	             		{
+	             			title:"李佳薇 - 鞋",
+	             			mp3:"./music/4.mp3"
+	             		},
+	             		{
+	             			title:"李佳薇 - 也好也不好",
+	             			mp3:"./music/5.mp3"
+	             		},
+	             		{
+	             			title:"李佳薇 - 真话",
+	             			mp3:"./music/6.mp3"
+	             		},
+	             		{
+	             			title:"汪东城;曾沛慈 - 在你离开那一天",
+	             			mp3:"./music/7.mp3"
+	             		},
+	             		{
+	             			title:"吴若希 - 越难越爱",
+	             			mp3:"./music/8.mp3"
+	             		},
+	             		{
+	             			title:"西单女孩 - 原点",
+	             			mp3:"./music/9.mp3"
+	             		}
+	             	]);
+	/* setTimeout(function(){
+		ctbPL.setOnlyPlayList([
+			             		{
+			             			title:"李佳薇 - 真话",
+			             			mp3:"./music/6.mp3"
+			             		},
+			             		{
+			             			title:"汪东城;曾沛慈 - 在你离开那一天",
+			             			mp3:"./music/7.mp3"
+			             		},
+			             		{
+			             			title:"吴若希 - 越难越爱",
+			             			mp3:"./music/8.mp3"
+			             		},
+			             		{
+			             			title:"西单女孩 - 原点",
+			             			mp3:"./music/9.mp3"
+			             		}
+			             	]);
+	}, 15000); */
+});
+</script>
+</body>
+</html>

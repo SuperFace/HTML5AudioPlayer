@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo : jPlayer as a video playlist player</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store,no-siteapp, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui;">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="CTB-Player">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../dist/skin/pink.flag/css/jplayer.pink.flag.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../lib/jquery.min.js"></script>
+<script type="text/javascript" src="../../dist/jplayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="../../dist/add-on/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	}, [
+		{
+			title:"Big Buck Bunny Trailer",
+			artist:"Blender Foundation",
+			free:true,
+			m3u8a: "http://192.168.100.83:80/222/222.m3u8"
+		},
+		{
+			title:"Finding Nemo Teaser",
+			artist:"Pixar",
+			m3u8a: "http://192.168.100.83:80/222/222.m3u8"
+		},
+		{
+			title:"Incredibles Teaser",
+			artist:"Pixar",
+			m3u8a: "http://192.168.100.83:80/222/222.m3u8"
+		}
+	], {
+		swfPath: "../../dist/jplayer",
+		supplied: "m3u8a",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true
+	});
+
+});
+//]]>
+</script>
+</head>
+<body>
+<video src="http://192.168.100.83:80/222/222.m3u8" autoplay="autoplay" style="width:800px;height:600px;" controls="controls"></video>
+
+</body>
+
+</html>
